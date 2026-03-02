@@ -38,18 +38,6 @@ gmd(
 
 gmd(
   {
-    pattern: "chatai",
-    description: "General AI chat assistant",
-    category: "Ai",
-    filename: __filename,
-  },
-  async (from, Gifted, conText) => {
-    await queryAI("chat", conText.q, conText);
-  },
-);
-
-gmd(
-  {
     pattern: "gpt",
     aliases: ["chatgpt"],
     description: "Chat with GPT model",
@@ -76,8 +64,8 @@ gmd(
 
 gmd(
   {
-    pattern: "gpt4o",
-    aliases: ["chatgpt4o"],
+    pattern: "gpt4",
+    aliases: ["chatgpt4"],
     description: "Chat with GPT-4o model",
     category: "Ai",
     filename: __filename,
@@ -89,26 +77,14 @@ gmd(
 
 gmd(
   {
-    pattern: "gpt4o-mini",
-    aliases: ["chatgpt4o-mini"],
+    pattern: "gpt4o",
+    aliases: ["chatgpt4o"],
     description: "Chat with GPT-4o Mini (faster)",
     category: "Ai",
     filename: __filename,
   },
   async (from, Gifted, conText) => {
     await queryAI("gpt4o-mini", conText.q, conText);
-  },
-);
-
-gmd(
-  {
-    pattern: "openai",
-    description: "Chat with OpenAI model",
-    category: "Ai",
-    filename: __filename,
-  },
-  async (from, Gifted, conText) => {
-    await queryAI("openai", conText.q, conText);
   },
 );
 
